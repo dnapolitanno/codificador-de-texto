@@ -30,35 +30,27 @@ btnCriptografar.addEventListener("click", function (event) {
   if (textoEntrada.value) {
     textoEntrada.value = criptografarLetras(textoEntrada.value);
     console.log(textoEntrada.value);
+    containerMessage.style.display = "none";
+    containerResultado.style.display = "flex";
     textoResultado.value = textoEntrada.value;
+    textoEntrada.value = "";
 
     textoResultado.style.height = "auto";
     textoResultado.style.height = textoResultado.scrollHeight + "px";
-
-    textoEntrada.value = "";
-
-    containerMessage.style.display = "none";
-    containerResultado.style.display = "flex";
   }
-});
-
-textoResultado.addEventListener("input", function () {
-  this.style.height = "auto";
-  this.style.height = this.scrollHeight + "px";
 });
 
 btnDescriptografar.addEventListener("click", function (event) {
   if (textoEntrada.value) {
     textoEntrada.value = decriptografarLetras(textoEntrada.value);
     console.log(textoEntrada.value);
+    containerMessage.style.display = "none";
+    containerResultado.style.display = "flex";
     textoResultado.value = textoEntrada.value;
     textoEntrada.value = "";
 
     textoResultado.style.height = "auto";
     textoResultado.style.height = textoResultado.scrollHeight + "px";
-
-    containerMessage.style.display = "none";
-    containerResultado.style.display = "flex";
   }
 });
 
