@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #355ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072861;
+  --dark-blue-500: #052051;
+
+  --light-blue-100: #f3f9fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757f82;
+
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--light-blue-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#container {
+  display: flex;
+  width: 80%;
+  max-width: 100rem;
+}
+
+#left-side {
+  width: 70%;
+  padding: 30px;
+}
+
+#right-side {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#logoAlura {
+  width: 2rem;
+}
+
+#iconEx {
+  width: 1rem;
+}
+
+#container-crpitografia {
+  padding: 1rem 4rem;
+}
+
+#container-crpitografia textarea {
+  background-color: var(--light-blue-100);
+  border: none;
+  resize: none;
+  height: 30rem;
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--dark-blue-300);
+}
+
+#container-info {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+#container-info p {
+  margin: 1.5rem 0;
+  line-height: 1rem;
+}
+
+#container-crpitografia textarea::placeholder {
+  color: var(--dark-blue-300);
+  opacity: 1;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 1.2rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#btnCripto {
+  background-color: var(--dark-blue-300);
+  color: var(--light-blue-100);
+  border: none;
+}
+
+#btnCripto:hover {
+  background-color: var(--light-blue-100);
+  color: var(--dark-blue-300);
+  border: solid 0.1rem var(--dark-blue-300);
+}
+
+#btnDescripto {
+  background-color: var(--light-blue-100);
+  color: var(--dark-blue-300);
+  border: solid 0.1rem var(--dark-blue-300);
+}
+
+#btnDescripto:hover {
+  background-color: var(--dark-blue-300);
+  color: var(--light-blue-100);
+}
+
+#img-not-messagem {
+  width: 80%;
+  max-width: 400px;
+}
+
+#container-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+#container-message h2 {
+  font-size: 2rem;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+#container-message p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--gray-400);
+  margin: 0;
+}
+
+#container-resultado {
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  gap: 1rem;
+}
+
+#textoResultado {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--gray-400);
+  resize: none;
+  border: none;
+  overflow-y: auto;
+  max-height: 45rem;
+}
+
+#btnCopiar {
+  background-color: #fff;
+  color: var(--dark-blue-300);
+  border: solid 0.1rem var(--dark-blue-300);
+}
+
+#btnCopiar:hover {
+  background-color: var(--dark-blue-300);
+  color: #fff;
+}
+
+@media (max-width: 1280px) {
+  body {
+    height: 100%;
+  }
+
+  #container {
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  #left-side {
+    width: 90%;
+  }
+
+  #logoAlura {
+    padding-bottom: 2rem;
+  }
+
+  #container-crpitografia {
+    padding: 2rem 0;
+  }
+
+  #textoResultado {
+    overflow-y: hidde;
+    max-height: auto;
+  }
+
+  #right-side {
+    width: 90%;
+  }
+
+  #img-not-message {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  body {
+    height: 100%;
+  }
+
+  #container {
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  #left-side {
+    width: 85%;
+  }
+
+  #logoAlura {
+    padding-bottom: 2rem;
+  }
+
+  #container-crpitografia {
+    padding: 2rem 0;
+  }
+
+  #textoResultado {
+    overflow-y: hidde;
+    max-height: auto;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  #right-side {
+    width: 80%;
+  }
+
+  #img-not-message {
+    display: none;
+  }
+}
